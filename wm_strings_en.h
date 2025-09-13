@@ -72,7 +72,7 @@ const char HTTP_FORM_PARAM_HEAD[]  PROGMEM = "<hr><br/>";
 const char HTTP_FORM_PARAM[]       PROGMEM = "<br/><input id='{i}' name='{n}' maxlength='{l}' value='{v}' {c}>\n"; // do not remove newline!
 
 const char HTTP_SCAN_LINK[]        PROGMEM = "<br/><form action='/wifi?refresh=1' method='POST'><button name='refresh' value='1'>Обновить</button></form>";
-const char HTTP_SAVED[]            PROGMEM = "<div class='msg'>Сохранение данных<br/>Попытка подключения ESP к сети.<br />Если не удастся, переподключитесь к AP, чтобы попробовать снова</div>";
+const char HTTP_SAVED[]            PROGMEM = "<div class='msg'>Сохранение данных<br/>Попытка подключения ESP к сети.<br />Если не удастся, переподключитесь к точке доступа, чтобы попробовать снова</div>";
 const char HTTP_PARAMSAVED[]       PROGMEM = "<div class='msg S'>Сохранено<br/></div>";
 const char HTTP_END[]              PROGMEM = "</div></body></html>";
 const char HTTP_ERASEBTN[]         PROGMEM = "<br/><form action='/erase' method='get'><button class='D'>Удалить конфигурацию WiFi</button></form>";
@@ -84,7 +84,7 @@ const char HTTP_STATUS_OFF[]       PROGMEM = "<div class='msg {c}'><strong>Не 
 const char HTTP_STATUS_OFFPW[]     PROGMEM = "<br/>Ошибка аутентификации"; // STATION_WRONG_PASSWORD,  no eps32
 const char HTTP_STATUS_OFFNOAP[]   PROGMEM = "<br/>Точка доступа не найдена";   // WL_NO_SSID_AVAIL
 const char HTTP_STATUS_OFFFAIL[]   PROGMEM = "<br/>Не удалось подключиться"; // WL_CONNECT_FAILED
-const char HTTP_STATUS_NONE[]      PROGMEM = "<div class='msg'>AP не установлен</div>";
+const char HTTP_STATUS_NONE[]      PROGMEM = "<div class='msg'>Точка доступа не установлена</div>";
 const char HTTP_BR[]               PROGMEM = "<br/>";
 
 
@@ -145,8 +145,7 @@ const char HTTP_HELP[]             PROGMEM =
  "<td>Перезагрузить устройство</td></tr>"
  "<tr><td>/erase</td>"
  "<td>Стереть настройки WiFi и перезагрузить устройство. Устройство не подключится к сети, пока не введены новые данные WiFi.</td></tr>"
- "</table>"
- "<p/>Github <a href='https://github.com/tzapu/WiFiManager'>https://github.com/tzapu/WiFiManager</a>.";
+ "</table>";
 #else
 const char HTTP_HELP[]             PROGMEM = "";
 #endif
